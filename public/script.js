@@ -1,12 +1,12 @@
 "use strict";
 
-const socket = io.connect("http://localhost:3000"),
+const socket = io.connect("34.213.243.98"),
       createRoomButton = document.querySelector("#create-room-button"),
       createRoomModal = document.querySelector("#create-room-modal"),
       addRoomButton = document.querySelector("#add-room-button"),
       inputRoomName = document.querySelector("#input-room-name"),
       inputRoomPassword = document.querySelector("#input-room-password"),
-      cancel = document.querySelector("#cancel"),
+      cancelLink = document.querySelector("#cancel"),
       createLabel = document.querySelector("#create-label"),
       nameLabel = document.querySelector("#name-label"),
       roomTabs = document.querySelector("#room-tabs"),
@@ -17,7 +17,7 @@ const socket = io.connect("http://localhost:3000"),
       passwordCancel = document.querySelector("#password-cancel"),
       getStarted = document.querySelector("#get-started"),
       chatBox = document.querySelector("#chat-box"),
-      messages = document.querySelector("#messages"),
+      messagesDiv = document.querySelector("#messages"),
       messagesUl = document.querySelector("#messages-ul"),
       inputChat = document.querySelector("#input-chat"),
       submitButton = document.querySelector("#submit-button"),
@@ -81,7 +81,7 @@ socket.on("setupRoom", room => {
   if (getStarted.style.display !== "none") {
     getStarted.style.display = "none";
     chatBox.style.display = "flex";
-    messages.style.display = "flex";
+    messagesDiv.style.display = "flex";
   }
   currentRoom = room.name;
   messagesUl.innerHTML = "";
@@ -168,7 +168,7 @@ addRoomButton.addEventListener("click", event => {
   }
 });
 
-cancel.addEventListener("click", event => {
+cancelLink.addEventListener("click", event => {
   createRoomModal.style.display = "none";
   inputRoomName.value = "";
   inputRoomPassword.value = "";

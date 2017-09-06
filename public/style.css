@@ -1,15 +1,14 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.1em;
-  display: flex;
-  justify-content: center;
 }
 
 #create-room-modal {
   display: none;
   position: fixed;
+  left: calc(50% - 300px);
   width: 600px;
-  height: 430px;
+  height: 460px;
   background-color: white;
   border: 2px solid black;
   margin-top: 20vh;
@@ -20,8 +19,9 @@ body {
 #password-modal {
   display: none;
   position: fixed;
+  left: calc(50% - 300px);
   width: 600px;
-  height: 350px;
+  height: 360px;
   background-color: white;
   border: 2px solid black;
   margin-top: 20vh;
@@ -30,12 +30,16 @@ body {
 }
 
 input {
-  height: 30px;
+  height: 100%;
   width: 550px;
   border: 1px solid black;
   outline-style: none;
   padding: 10px;
   box-sizing: border-box;
+}
+
+#input-username {
+  max-height: 40px;
 }
 
 #add-room-button {

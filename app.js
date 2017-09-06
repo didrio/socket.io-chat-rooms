@@ -7,7 +7,7 @@ const server = app.listen(3000, () => console.log("Server Connected"));
 const io = socket(server);
 const hotel = new socketHotel(io.sockets.adapter);
 const socketClient = require("./node_modules/socket.io-client");
-const client = socketClient.connect("http://localhost:3000");
+const client = socketClient.connect("http://localhost");
 
 app.use(helmet());
 app.use(express.static("./public"));
