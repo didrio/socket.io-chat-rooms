@@ -1,5 +1,5 @@
-# simple-node-express-server
+# socket.io-chat-rooms
 
-Created for this tutorial:
+Working demo here:
 
-http://didr.io/tutorials/node-ec2-nginx-https.html
+http://34.213.243.98/
